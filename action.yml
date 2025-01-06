@@ -95,7 +95,7 @@ runs:
       id: atmos-settings
       uses: cloudposse/github-action-atmos-get-setting@v2
       with:
-        settings: |
+        settings: |-
           - component: ${{ inputs.component }}
             stack: ${{ inputs.stack }}
             settingsPath: settings.github.actions_enabled
