@@ -99,6 +99,10 @@ runs:
         settings: |
           - component: ${{ inputs.component }}
             stack: ${{ inputs.stack }}
+            settingsPath: settings.github.actions_enabled1
+            outputPath: enabled
+          - component: ${{ inputs.component }}
+            stack: ${{ inputs.stack }}
             settingsPath: settings.github.actions_enabled
             outputPath: enabled
           - component: ${{ inputs.component }}
