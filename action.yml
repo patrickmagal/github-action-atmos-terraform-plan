@@ -95,6 +95,7 @@ runs:
       id: atmos-settings
       uses: cloudposse/github-action-atmos-get-setting@v2
       with:
+    
         settings: |
           - component: ${{ inputs.component }}
             stack: ${{ inputs.stack }}
@@ -179,7 +180,7 @@ runs:
       shell: bash
 
     - name: Debug Atmos Settings1
-      run: echo "${{ fromJson(steps.atmos-settings.outputs.settings).enabled }}"
+      run: echo "${{ (steps.atmos-settings.outputs.settings).enabled }}"
       shell: bash
 
     - name: Install Terraform
